@@ -139,7 +139,7 @@ module.exports = function( grunt ) {
                     options: {
                         specs: 'test/specs/build/**/*spec.js',
                         keepRunner: true,
-                        template: require('grunt-template-jasmine-requirejs'),
+                        template: require('grunt-template-jasmine-requirejs-preloader'),
                         templateOptions: {
                             requireConfig: requireConfig
                         }
