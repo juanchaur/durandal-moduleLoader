@@ -1,0 +1,14 @@
+{
+  "name": "DurandalAppStarter",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "~3.0.0",
+    "durandal": "null",
+    "font-awesome": "~3.2.1",
+    "jquery": "~1.9.1",
+    "knockoutjs": "~2.3.0",
+    "requirejs": "null",
+    "jasmine": "null"
+  },
+  "private": true
+}
