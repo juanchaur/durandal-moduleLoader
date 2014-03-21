@@ -1,24 +1,12 @@
-define(['plugins/router', 'durandal/app'], function (router, app) {
+define(['plugins/router',
+        'durandal/app',
+        'config/config'], 
+    function ( router, app, config ) {
     return {
         router: router,
         
         activate: function () {
-            router.map([
-                { 
-                    route: '',
-                    title:'Welcome',
-                    moduleId: 'module!welcome',
-                    nav: true
-                },
-
-                { 
-                    route: 'flickr',
-                    //moduleId: 'viewmodels/flickr',
-                    moduleId: 'module!flickr',
-                    title: 'Flickr',
-                    nav: true
-                }
-            ]).buildNavigationModel();
+            router.map( config.router ).buildNavigationModel();
             
             return router.activate();
         }
