@@ -24,11 +24,10 @@ define(['durandal/system',
         'durandal/viewLocator',
         'modulesLoader' ], function (system, app, viewLocator) {
 
-    //>>excludeStart("build", true);
-    system.debug(true);
-    //>>excludeEnd("build");
 
-    app.title = 'Durandal Starter Kit';
+    //system.debug(true);
+
+    app.title = 'Durandal Starter Kit - with Module Loader';
 
     app.configurePlugins({
         router:true,
@@ -42,7 +41,6 @@ define(['durandal/system',
         viewLocator.useConvention();
 
         // We change the convention to use the hMVC convention
-        // Dany modulesLoader
         viewLocator.convertModuleIdToViewId = function(moduleId) {
             var viewId;
             if (moduleId.indexOf('module!') !== -1) {
@@ -55,7 +53,6 @@ define(['durandal/system',
         };
 
         //Show the app by setting the root view model for our application with a transition.
-        //app.setRoot('viewmodels/shell', 'entrance');
         app.setRoot('module!shell', 'entrance');
     });
 });
